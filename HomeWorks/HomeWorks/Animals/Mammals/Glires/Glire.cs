@@ -1,4 +1,4 @@
-namespace HomeWork_9.Animals.Mammals.Glires;
+namespace HomeWorks.Animals.Mammals.Glires;
 
 public abstract class Glire: Mammal
 {

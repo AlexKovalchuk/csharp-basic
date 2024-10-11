@@ -1,4 +1,4 @@
-namespace HomeWork_9.Animals.Fish;
+namespace HomeWorks.Animals.Fish;
 
 public abstract class Fish : Animals
 {

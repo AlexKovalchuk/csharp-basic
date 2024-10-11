@@ -1,4 +1,4 @@
-namespace HomeWork_9.Animals.Mammals.Predators;
+namespace HomeWorks.Animals.Mammals.Predators;
 
 public abstract class CatsFamily : Predators
 {

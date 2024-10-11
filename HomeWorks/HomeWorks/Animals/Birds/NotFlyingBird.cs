@@ -1,4 +1,4 @@
-namespace HomeWork_9.Animals.Birds;
+namespace HomeWorks.Animals.Birds;
 
 public abstract class NotFlyingBird : Bird
 {
