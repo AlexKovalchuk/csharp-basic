@@ -1,4 +1,4 @@
-namespace HomeWork_9.Animals.Mammals.Harvbivorous;
+namespace HomeWorks.Animals.Mammals.Harvbivorous;
 
 public abstract class Harvbivorous : Mammal
 {
