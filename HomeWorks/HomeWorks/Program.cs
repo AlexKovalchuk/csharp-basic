@@ -1,83 +1,32 @@
-﻿
-using HomeWorks.Animals;
-using HomeWorks.Animals.Birds;
-using HomeWorks.Animals.Fish;
-using HomeWorks.Animals.Mammals.Glires;
-using HomeWorks.Animals.Mammals.Harvbivorous;
-using HomeWorks.Animals.Mammals.Predators;
+﻿using HomeWorks;
 
-var random = new Random();
-var animalTypesCount = 7;
-var ownersNames = new[] { "John Wick", "Oscar De La Hoya", "Tyson Furry", "Arnold Schwarzenegger", "Angelina Joly", "Tonny Start", "Thor Odinson", "Bruce Benner", "Bruce Lee", "Jackie Chan" };
-var animalsNames = new[] { "Tom", "MobyDick", "Bollo", "Lobbo", "Jerry", "Nemo", "Optimus", "Lucky", "Jumper", "Read Line" };
-var animalCount = 10;
-var animals = new List<Animals>();
-for (int i = 0; i < animalCount; i++)
+Console.WriteLine("Hello Home Work 11 -> My List");
+var myList = new MyList<int>();
+myList.Add(1);
+myList.Add(2);
+foreach (var ml in myList)
 {
-    var masterNameIndex = random.Next(ownersNames.Length);
-    var masterName = ownersNames[masterNameIndex];
-
-    var animalNameIndex = random.Next(animalsNames.Length);
-    var animalName = animalsNames[animalNameIndex];
-
-    animals.Add(new Wolf()
-    {
-        Name = "Huan the Great",
-        Age = 703,
-        Master = "Luthien"
-    });
-    var animalNumber = random.Next(animalTypesCount);
-    Animals animal = animalNumber switch
-    {
-        0 => new Parrot()
-        {
-            Name = animalName,
-            Age = random.Next(1, 17),
-            Master = masterName
-        },
-        1 => new Whale()
-        {
-            Name = animalName,
-            Age = random.Next(1, 17),
-            Master = masterName
-        },
-        2 => new Mouse()
-        {
-            Name = animalName,
-            Age = random.Next(1, 17),
-            Master = masterName
-        },
-        3 => new Cow()
-        {
-            Name = animalName,
-            Age = random.Next(1, 17),
-            Master = masterName
-        },
-        4 => new Dog()
-        {
-            Name = animalName,
-            Age = random.Next(1, 17),
-            Master = masterName
-        },
-        5 => new Wolf()
-        {
-            Name = animalName,
-            Age = random.Next(1, 17),
-            Master = masterName
-        },
-        6 => new Wolf()
-        {
-            Name = animalName,
-            Age = random.Next(1, 17),
-            Master = masterName
-        },
-    };
-    animals.Add(animal);
+    Console.WriteLine($"element = {ml}");
 }
 
-for (int i = 0; i < animals.Count - 1; i++)
+myList[0] = 17;
+myList[1] = 347;
+Console.WriteLine($"[0] = {myList[0]} && [1] = {myList[1]}");
+Console.WriteLine($"Try to find 17 {myList.Find(17)}");
+Console.WriteLine($"try to remove 17 {myList.Remove(17)}");
+Console.WriteLine($"try to remove 17 {myList.Remove(17)}");
+Console.WriteLine($"Try to find 17 {myList.Find(17)}");
+myList.Remove(347);
+myList.Add(112);
+myList.Add(527);
+myList.Add(527);
+myList.Add(372);
+Console.WriteLine($"Try to find 372 {myList.Find(372)}");
+
+myList = myList + 5;
+myList = myList + 10;
+myList = myList - 527;
+foreach (var ml in myList)
 {
-    var a = animals[i];
-    Console.WriteLine($"{a.Name}, {a.Master}");
-    animals[i].Feed();
+    Console.WriteLine($"element = {ml}");
 }
